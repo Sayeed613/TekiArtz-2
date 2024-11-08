@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+body, html {
+  overflow-x: hidden;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+.infinite-scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.infinite-scroll-content {
+  display: inline-block;
+  animation: scroll 16s linear infinite;
+}
+
+.stat {
+  display: inline-block;
+  padding: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 4s ease-in-out forwards;
+}
+.dark .text-gray-100{
+  color: #d1d5db;
+}
+
+button.transform{
+  transition: transform 0.3s ease-in-out;
+}
+
